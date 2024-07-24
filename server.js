@@ -23,7 +23,7 @@ const emailSchema = new mongoose.Schema({
 
 const Email = mongoose.model('Email', emailSchema);
 
-// Configure the email transport using Gmail
+// Configure of the email transport using Gmail
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -49,7 +49,7 @@ app.post('/subscribe', async (req, res) => {
         return res.status(500).send({ message: 'Hmm... Our digital gears are grinding a bit.', error });
     }
 
-    // Save the email to the database
+    // Saving the email to the database
     const newEmail = new Email({ email });
     try {
         await newEmail.save();
