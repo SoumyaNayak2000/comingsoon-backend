@@ -62,9 +62,8 @@ app.post('/subscribe', async (req, res) => {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Subscription Confirmation',
-        text: `Dear Valued Subscriber,
-        Woohoo! You're in the loop! 🎉
+        subject: `Woohoo! You're in the loop! 🎉`,
+        text: `Dear Honored Patron,
         Thank you for your interest in Sthaniya Saathi. We're thrilled to have you join our community of early supporters.
         We're working hard to bring you an exceptional experience, and we can't wait to share it with you. Your email just got the VIP treatment and is now nestled comfortably in our database. Consider yourself part of our inner circle of soon-to-be-wowed individuals.
         What's next?
